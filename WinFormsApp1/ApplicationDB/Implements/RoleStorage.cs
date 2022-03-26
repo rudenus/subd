@@ -21,6 +21,17 @@ namespace ApplicationDB.Implements
             context.Roles.Add(model);
             context.SaveChanges();
         }
+        public Role GetElement(int id)
+        {
+            using var context = new ApplicationContext();
+            var element = context.Roles
+            .FirstOrDefault(rec => rec.Id == id);
+            if (element == null)
+            {
+                throw new Exception("Элемент не найден");
+            }
+            return element;
+        }
         public void Update(Role model)
         {
             using var context = new ApplicationContext();

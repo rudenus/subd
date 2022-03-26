@@ -23,19 +23,108 @@ namespace WinFormsApp1
 
         private void buttonAdd_Click(object sender, EventArgs e)
         {
+            if(!int.TryParse(textBoxNumber.Text, out int temp))
+            {
+                MessageBox.Show("Введите корректный номер класса","Ошибка", MessageBoxButtons.OK,
+                       MessageBoxIcon.Error);
+                return;
+            }
+            if(textBoxLetter.Text == "")
+            {
+                MessageBox.Show("Литера не может быть пустой", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
             int num = Convert.ToInt32(textBoxNumber.Text);
+            textBoxNumber.Text = "";
             string letter = textBoxLetter.Text;
+            textBoxLetter.Text = "";
             classStorage.Insert(new Class() { Number = num, Letter = letter });
+            LoadData();
+        }
+        private void LoadData()
+        {
+            try
+            {
+                var list = classStorage.GetFullList();
+                if (list != null)
+                {
+                    dataGridView.DataSource = list;
+                    dataGridView.Columns[0].Visible = false;
+                    dataGridView.Columns[1].AutoSizeMode =
+                    DataGridViewAutoSizeColumnMode.Fill;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Ошибка", MessageBoxButtons.OK,
+               MessageBoxIcon.Error);
+            }
         }
 
         private void buttonRefresh_Click(object sender, EventArgs e)
         {
-            List<Class> list = classStorage.GetFullList();
-            label1.Text = String.Empty;
-            foreach(Class item in list) 
+            LoadData();
+        }
+
+        private void buttonUpdate_Click(object sender, EventArgs e)
+        {
+            if (!int.TryParse(textBoxNumberUpdate.Text, out int temp))
             {
-                label1.Text += item.Id + " " + item.Number + item.Letter + Environment.NewLine;
+                MessageBox.Show("Введите корректный номер класса", "Ошибка", MessageBoxButtons.OK,
+                       MessageBoxIcon.Error);
+                return;
             }
+            if (textBoxLetterUpdate.Text == "")
+            {
+                MessageBox.Show("Литера не может быть пустой", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            if (!int.TryParse(textBoxIdUpdate.Text, out temp))
+            {
+                MessageBox.Show("Введите корректный Id", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            int id = Convert.ToInt32(textBoxIdUpdate.Text);
+            textBoxIdUpdate.Text = "";
+            int num = Convert.ToInt32(textBoxNumberUpdate.Text);
+            textBoxNumberUpdate.Text = "";
+            string letter = textBoxLetterUpdate.Text;
+            textBoxLetterUpdate.Text = "";
+            try
+            {
+                classStorage.Update(new Class() { Id = id, Number = num, Letter = letter });
+            }
+            catch
+            {
+                MessageBox.Show("Отсутствует запись с данным индексом", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            LoadData();
+        }
+
+        private void buttonDelete_Click(object sender, EventArgs e)
+        {
+            if (!int.TryParse(textBoxIdDelete.Text, out int temp))
+            {
+                MessageBox.Show("Введите корректный Id", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            int id = Convert.ToInt32(textBoxIdDelete.Text);
+            textBoxIdDelete.Text = "";
+            try
+            {
+                classStorage.Delete(new Class() { Id = id });
+            }
+            catch
+            {
+                MessageBox.Show("Отсутствует запись с данным индексом", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            LoadData();
+        }
+
+        private void FormClasses_Load(object sender, EventArgs e)
+        {
+            LoadData();
         }
     }
 }
