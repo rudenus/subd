@@ -15,6 +15,12 @@ namespace ApplicationDB.Implements
             return context.Users
             .ToList();
         }
+        public List<User> GetFiltredList(string str)
+        {
+            using var context = new ApplicationContext();
+            return context.Users.Where(r => r.Name.Contains(str))
+            .ToList();
+        }
         public User GetElement(int id)
         {
             using var context = new ApplicationContext();

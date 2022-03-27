@@ -77,9 +77,9 @@
             // 
             // buttonSubjects
             // 
-            this.buttonSubjects.Location = new System.Drawing.Point(303, 360);
+            this.buttonSubjects.Location = new System.Drawing.Point(284, 27);
             this.buttonSubjects.Name = "buttonSubjects";
-            this.buttonSubjects.Size = new System.Drawing.Size(157, 47);
+            this.buttonSubjects.Size = new System.Drawing.Size(157, 36);
             this.buttonSubjects.TabIndex = 4;
             this.buttonSubjects.Text = "Предметы";
             this.buttonSubjects.UseVisualStyleBackColor = true;

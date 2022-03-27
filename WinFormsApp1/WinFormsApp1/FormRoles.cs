@@ -37,7 +37,15 @@ namespace WinFormsApp1
         {
             try
             {
-                var list = roleStorage.GetFullList();
+                List<Role> list;
+                if (textBoxFiltred.Text != "")
+                {
+                    list = roleStorage.GetFiltredList(textBoxFiltred.Text);
+                }
+                else
+                {
+                    list = roleStorage.GetFullList();
+                }
                 if (list != null)
                 {
                     dataGridView.DataSource = list;

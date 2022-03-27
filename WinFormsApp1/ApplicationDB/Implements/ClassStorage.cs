@@ -15,6 +15,12 @@ namespace ApplicationDB.Implements
             return context.Classes
             .ToList();
         }
+        public List<Class> GetFiltredList(int num)
+        {
+            using var context = new ApplicationContext();
+            return context.Classes.Where(r => r.Number == num)
+            .ToList();
+        }
         public void Insert(Class model)
         {
             using var context = new ApplicationContext();

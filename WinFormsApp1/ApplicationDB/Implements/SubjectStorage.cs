@@ -15,6 +15,12 @@ namespace ApplicationDB.Implements
             return context.Subjects
             .ToList();
         }
+        public List<Subject> GetFiltredList(string str)
+        {
+            using var context = new ApplicationContext();
+            return context.Subjects.Where(r => r.Name.Contains(str))
+            .ToList();
+        }
         public Subject GetElement(int id)
         {
             using var context = new ApplicationContext();

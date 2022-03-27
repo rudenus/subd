@@ -15,6 +15,12 @@ namespace ApplicationDB.Implements
             return context.Roles
             .ToList();
         }
+        public List<Role> GetFiltredList(string str)
+        {
+            using var context = new ApplicationContext();
+            return context.Roles.Where(r => r.Name.Contains(str))
+            .ToList();
+        }
         public void Insert(Role model)
         {
             using var context = new ApplicationContext();

@@ -46,7 +46,21 @@ namespace WinFormsApp1
         {
             try
             {
-                var list = classStorage.GetFullList();
+                List<Class> list;
+                if (textBoxFiltred.Text != "")
+                {
+                    if(!int.TryParse(textBoxFiltred.Text, out int temp))
+                    {
+                        MessageBox.Show("Номер класса должен быть целым числом", "Ошибка", MessageBoxButtons.OK,
+              MessageBoxIcon.Error);
+                        return;
+                    }
+                    list = classStorage.GetFiltredList(Convert.ToInt32(textBoxFiltred.Text));
+                }
+                else
+                {
+                    list = classStorage.GetFullList();
+                }
                 if (list != null)
                 {
                     dataGridView.DataSource = list;

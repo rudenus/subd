@@ -53,7 +53,16 @@ namespace WinFormsApp1
         {
             try
             {
-                var list = subjectStorage.GetFullList();
+                List<Subject> list;
+                if (textBoxFiltred.Text != "")
+                {
+                    list = subjectStorage.GetFiltredList(textBoxFiltred.Text);
+                }
+                else
+                {
+                    list = subjectStorage.GetFullList();
+                }
+
                 if (list != null)
                 {
                     dataGridView.DataSource = list;

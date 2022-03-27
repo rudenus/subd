@@ -1,0 +1,391 @@
+info: 26.03.2022 23:55:06.919 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 6.0.3 initialized 'ApplicationContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.3+94d0a8eaeb9cf5af6ce55a9e59153c1a1be3244f' with options: None
+info: 26.03.2022 23:55:07.570 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (77ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT r."Id", r."Name"
+      FROM "Roles" AS r
+info: 26.03.2022 23:55:13.751 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 6.0.3 initialized 'ApplicationContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.3+94d0a8eaeb9cf5af6ce55a9e59153c1a1be3244f' with options: None
+info: 26.03.2022 23:55:13.908 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (14ms) [Parameters=[@p0='?'], CommandType='Text', CommandTimeout='30']
+      INSERT INTO "Roles" ("Name")
+      VALUES (@p0)
+      RETURNING "Id";
+info: 26.03.2022 23:55:14.111 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 6.0.3 initialized 'ApplicationContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.3+94d0a8eaeb9cf5af6ce55a9e59153c1a1be3244f' with options: None
+info: 26.03.2022 23:55:14.112 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT r."Id", r."Name"
+      FROM "Roles" AS r
+info: 27.03.2022 00:20:05.790 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 6.0.3 initialized 'ApplicationContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.3+94d0a8eaeb9cf5af6ce55a9e59153c1a1be3244f' with options: None
+info: 27.03.2022 00:20:06.411 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (68ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT u."Id", u."ClassId", u."Login", u."Name", u."Password", u."RoleId"
+      FROM "Users" AS u
+info: 27.03.2022 00:20:17.690 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 6.0.3 initialized 'ApplicationContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.3+94d0a8eaeb9cf5af6ce55a9e59153c1a1be3244f' with options: None
+info: 27.03.2022 00:20:17.812 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (17ms) [Parameters=[@__model_Class_Id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT c."Id", c."Letter", c."Number"
+      FROM "Classes" AS c
+      WHERE c."Id" = @__model_Class_Id_0
+      LIMIT 1
+info: 27.03.2022 00:20:17.868 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (2ms) [Parameters=[@__model_Role_Id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT r."Id", r."Name"
+      FROM "Roles" AS r
+      WHERE r."Id" = @__model_Role_Id_0
+      LIMIT 1
+info: 27.03.2022 00:20:18.037 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (5ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?', @p2='?', @p3='?', @p4='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      INSERT INTO "Users" ("ClassId", "Login", "Name", "Password", "RoleId")
+      VALUES (@p0, @p1, @p2, @p3, @p4)
+      RETURNING "Id";
+info: 27.03.2022 00:20:18.163 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 6.0.3 initialized 'ApplicationContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.3+94d0a8eaeb9cf5af6ce55a9e59153c1a1be3244f' with options: None
+info: 27.03.2022 00:20:18.165 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT u."Id", u."ClassId", u."Login", u."Name", u."Password", u."RoleId"
+      FROM "Users" AS u
+info: 27.03.2022 12:55:44.494 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 6.0.3 initialized 'ApplicationContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.3+94d0a8eaeb9cf5af6ce55a9e59153c1a1be3244f' with options: None
+info: 27.03.2022 12:55:47.555 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (238ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT u."Id", u."ClassId", u."Login", u."Name", u."Password", u."RoleId"
+      FROM "Users" AS u
+info: 27.03.2022 13:18:21.201 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 6.0.3 initialized 'ApplicationContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.3+94d0a8eaeb9cf5af6ce55a9e59153c1a1be3244f' with options: None
+info: 27.03.2022 13:18:21.819 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (86ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT s."Id", s."Name", s."UserId"
+      FROM "Subjects" AS s
+info: 27.03.2022 13:18:30.861 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 6.0.3 initialized 'ApplicationContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.3+94d0a8eaeb9cf5af6ce55a9e59153c1a1be3244f' with options: None
+info: 27.03.2022 13:18:30.982 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (11ms) [Parameters=[@__model_User_Id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT u."Id", u."ClassId", u."Login", u."Name", u."Password", u."RoleId"
+      FROM "Users" AS u
+      WHERE u."Id" = @__model_User_Id_0
+      LIMIT 1
+info: 27.03.2022 13:18:32.329 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 6.0.3 initialized 'ApplicationContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.3+94d0a8eaeb9cf5af6ce55a9e59153c1a1be3244f' with options: None
+info: 27.03.2022 13:18:32.331 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT s."Id", s."Name", s."UserId"
+      FROM "Subjects" AS s
+info: 27.03.2022 13:18:35.809 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 6.0.3 initialized 'ApplicationContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.3+94d0a8eaeb9cf5af6ce55a9e59153c1a1be3244f' with options: None
+info: 27.03.2022 13:18:35.814 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (2ms) [Parameters=[@__model_User_Id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT u."Id", u."ClassId", u."Login", u."Name", u."Password", u."RoleId"
+      FROM "Users" AS u
+      WHERE u."Id" = @__model_User_Id_0
+      LIMIT 1
+info: 27.03.2022 13:18:36.005 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (4ms) [Parameters=[@p0='?', @p1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      INSERT INTO "Subjects" ("Name", "UserId")
+      VALUES (@p0, @p1)
+      RETURNING "Id";
+info: 27.03.2022 13:18:36.043 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 6.0.3 initialized 'ApplicationContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.3+94d0a8eaeb9cf5af6ce55a9e59153c1a1be3244f' with options: None
+info: 27.03.2022 13:18:36.044 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT s."Id", s."Name", s."UserId"
+      FROM "Subjects" AS s
+info: 27.03.2022 13:40:02.831 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 6.0.3 initialized 'ApplicationContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.3+94d0a8eaeb9cf5af6ce55a9e59153c1a1be3244f' with options: None
+info: 27.03.2022 13:40:03.466 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (76ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT c."Id", c."Letter", c."Number"
+      FROM "Classes" AS c
+info: 27.03.2022 13:40:13.624 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 6.0.3 initialized 'ApplicationContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.3+94d0a8eaeb9cf5af6ce55a9e59153c1a1be3244f' with options: None
+info: 27.03.2022 13:40:13.626 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT c."Id", c."Letter", c."Number"
+      FROM "Classes" AS c
+info: 27.03.2022 13:40:16.330 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 6.0.3 initialized 'ApplicationContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.3+94d0a8eaeb9cf5af6ce55a9e59153c1a1be3244f' with options: None
+info: 27.03.2022 13:40:16.331 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT c."Id", c."Letter", c."Number"
+      FROM "Classes" AS c
+info: 27.03.2022 13:40:23.858 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 6.0.3 initialized 'ApplicationContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.3+94d0a8eaeb9cf5af6ce55a9e59153c1a1be3244f' with options: None
+info: 27.03.2022 13:40:23.859 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT c."Id", c."Letter", c."Number"
+      FROM "Classes" AS c
+info: 27.03.2022 13:40:41.523 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 6.0.3 initialized 'ApplicationContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.3+94d0a8eaeb9cf5af6ce55a9e59153c1a1be3244f' with options: None
+info: 27.03.2022 13:40:41.524 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT c."Id", c."Letter", c."Number"
+      FROM "Classes" AS c
+info: 27.03.2022 13:40:42.747 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 6.0.3 initialized 'ApplicationContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.3+94d0a8eaeb9cf5af6ce55a9e59153c1a1be3244f' with options: None
+info: 27.03.2022 13:40:42.748 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT c."Id", c."Letter", c."Number"
+      FROM "Classes" AS c
+info: 27.03.2022 13:40:43.642 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 6.0.3 initialized 'ApplicationContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.3+94d0a8eaeb9cf5af6ce55a9e59153c1a1be3244f' with options: None
+info: 27.03.2022 13:40:43.643 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT c."Id", c."Letter", c."Number"
+      FROM "Classes" AS c
+info: 27.03.2022 13:44:10.380 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 6.0.3 initialized 'ApplicationContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.3+94d0a8eaeb9cf5af6ce55a9e59153c1a1be3244f' with options: None
+info: 27.03.2022 13:44:10.985 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (74ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT c."Id", c."Letter", c."Number"
+      FROM "Classes" AS c
+info: 27.03.2022 13:44:14.699 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 6.0.3 initialized 'ApplicationContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.3+94d0a8eaeb9cf5af6ce55a9e59153c1a1be3244f' with options: None
+info: 27.03.2022 13:44:14.805 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (14ms) [Parameters=[@__num_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT c."Id", c."Letter", c."Number"
+      FROM "Classes" AS c
+      WHERE c."Number" = @__num_0
+info: 27.03.2022 13:58:21.874 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 6.0.3 initialized 'ApplicationContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.3+94d0a8eaeb9cf5af6ce55a9e59153c1a1be3244f' with options: None
+info: 27.03.2022 13:58:22.487 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (69ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT r."Id", r."Name"
+      FROM "Roles" AS r
+info: 27.03.2022 13:58:34.845 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 6.0.3 initialized 'ApplicationContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.3+94d0a8eaeb9cf5af6ce55a9e59153c1a1be3244f' with options: None
+info: 27.03.2022 13:58:35.047 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (27ms) [Parameters=[@__str_0='?'], CommandType='Text', CommandTimeout='30']
+      SELECT r."Id", r."Name"
+      FROM "Roles" AS r
+      WHERE (@__str_0 = '') OR (strpos(r."Name", @__str_0) > 0)
+info: 27.03.2022 14:19:32.829 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 6.0.3 initialized 'ApplicationContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.3+94d0a8eaeb9cf5af6ce55a9e59153c1a1be3244f' with options: None
+info: 27.03.2022 14:19:33.442 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (76ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT c."Id", c."Letter", c."Number"
+      FROM "Classes" AS c
+info: 27.03.2022 14:19:43.861 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 6.0.3 initialized 'ApplicationContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.3+94d0a8eaeb9cf5af6ce55a9e59153c1a1be3244f' with options: None
+info: 27.03.2022 14:19:43.972 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (9ms) [Parameters=[@__num_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT c."Id", c."Letter", c."Number"
+      FROM "Classes" AS c
+      WHERE c."Number" = @__num_0
+info: 27.03.2022 14:19:46.361 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 6.0.3 initialized 'ApplicationContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.3+94d0a8eaeb9cf5af6ce55a9e59153c1a1be3244f' with options: None
+info: 27.03.2022 14:19:46.366 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (1ms) [Parameters=[@__num_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT c."Id", c."Letter", c."Number"
+      FROM "Classes" AS c
+      WHERE c."Number" = @__num_0
+info: 27.03.2022 14:19:50.013 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 6.0.3 initialized 'ApplicationContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.3+94d0a8eaeb9cf5af6ce55a9e59153c1a1be3244f' with options: None
+info: 27.03.2022 14:19:50.020 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT u."Id", u."ClassId", u."Login", u."Name", u."Password", u."RoleId"
+      FROM "Users" AS u
+info: 27.03.2022 14:19:53.581 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 6.0.3 initialized 'ApplicationContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.3+94d0a8eaeb9cf5af6ce55a9e59153c1a1be3244f' with options: None
+info: 27.03.2022 14:19:53.641 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (3ms) [Parameters=[@__str_0='?'], CommandType='Text', CommandTimeout='30']
+      SELECT u."Id", u."ClassId", u."Login", u."Name", u."Password", u."RoleId"
+      FROM "Users" AS u
+      WHERE (@__str_0 = '') OR (strpos(u."Name", @__str_0) > 0)
+info: 27.03.2022 14:19:58.163 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 6.0.3 initialized 'ApplicationContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.3+94d0a8eaeb9cf5af6ce55a9e59153c1a1be3244f' with options: None
+info: 27.03.2022 14:19:58.164 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (1ms) [Parameters=[@__str_0='?'], CommandType='Text', CommandTimeout='30']
+      SELECT u."Id", u."ClassId", u."Login", u."Name", u."Password", u."RoleId"
+      FROM "Users" AS u
+      WHERE (@__str_0 = '') OR (strpos(u."Name", @__str_0) > 0)
+info: 27.03.2022 14:20:02.322 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 6.0.3 initialized 'ApplicationContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.3+94d0a8eaeb9cf5af6ce55a9e59153c1a1be3244f' with options: None
+info: 27.03.2022 14:20:02.327 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT s."Id", s."Name", s."UserId"
+      FROM "Subjects" AS s
+info: 27.03.2022 14:20:07.292 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 6.0.3 initialized 'ApplicationContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.3+94d0a8eaeb9cf5af6ce55a9e59153c1a1be3244f' with options: None
+info: 27.03.2022 14:20:07.297 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (0ms) [Parameters=[@__str_0='?'], CommandType='Text', CommandTimeout='30']
+      SELECT s."Id", s."Name", s."UserId"
+      FROM "Subjects" AS s
+      WHERE (@__str_0 = '') OR (strpos(s."Name", @__str_0) > 0)
+info: 27.03.2022 14:20:09.987 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 6.0.3 initialized 'ApplicationContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.3+94d0a8eaeb9cf5af6ce55a9e59153c1a1be3244f' with options: None
+info: 27.03.2022 14:20:09.988 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (1ms) [Parameters=[@__str_0='?'], CommandType='Text', CommandTimeout='30']
+      SELECT s."Id", s."Name", s."UserId"
+      FROM "Subjects" AS s
+      WHERE (@__str_0 = '') OR (strpos(s."Name", @__str_0) > 0)
+info: 27.03.2022 14:20:14.133 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 6.0.3 initialized 'ApplicationContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.3+94d0a8eaeb9cf5af6ce55a9e59153c1a1be3244f' with options: None
+info: 27.03.2022 14:20:14.137 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT r."Id", r."Name"
+      FROM "Roles" AS r
+info: 27.03.2022 14:20:17.930 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 6.0.3 initialized 'ApplicationContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.3+94d0a8eaeb9cf5af6ce55a9e59153c1a1be3244f' with options: None
+info: 27.03.2022 14:20:17.942 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (4ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT l."Id", l."Estimation", l."SubjectId", l."UserId", l.date
+      FROM "Lessons" AS l
+info: 27.03.2022 14:20:21.085 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 6.0.3 initialized 'ApplicationContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.3+94d0a8eaeb9cf5af6ce55a9e59153c1a1be3244f' with options: None
+info: 27.03.2022 14:20:21.089 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (1ms) [Parameters=[@__num_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT l."Id", l."Estimation", l."SubjectId", l."UserId", l.date
+      FROM "Lessons" AS l
+      WHERE l."Estimation" = @__num_0
+info: 27.03.2022 14:20:35.102 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 6.0.3 initialized 'ApplicationContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.3+94d0a8eaeb9cf5af6ce55a9e59153c1a1be3244f' with options: None
+info: 27.03.2022 14:20:35.107 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (1ms) [Parameters=[@__model_User_Id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT u."Id", u."ClassId", u."Login", u."Name", u."Password", u."RoleId"
+      FROM "Users" AS u
+      WHERE u."Id" = @__model_User_Id_0
+      LIMIT 1
+info: 27.03.2022 14:20:36.406 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 6.0.3 initialized 'ApplicationContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.3+94d0a8eaeb9cf5af6ce55a9e59153c1a1be3244f' with options: None
+info: 27.03.2022 14:20:36.407 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (1ms) [Parameters=[@__num_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT l."Id", l."Estimation", l."SubjectId", l."UserId", l.date
+      FROM "Lessons" AS l
+      WHERE l."Estimation" = @__num_0
+info: 27.03.2022 14:20:39.798 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 6.0.3 initialized 'ApplicationContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.3+94d0a8eaeb9cf5af6ce55a9e59153c1a1be3244f' with options: None
+info: 27.03.2022 14:20:39.799 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT u."Id", u."ClassId", u."Login", u."Name", u."Password", u."RoleId"
+      FROM "Users" AS u
+info: 27.03.2022 14:20:42.926 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 6.0.3 initialized 'ApplicationContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.3+94d0a8eaeb9cf5af6ce55a9e59153c1a1be3244f' with options: None
+info: 27.03.2022 14:20:42.927 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT l."Id", l."Estimation", l."SubjectId", l."UserId", l.date
+      FROM "Lessons" AS l
+info: 27.03.2022 14:20:46.631 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 6.0.3 initialized 'ApplicationContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.3+94d0a8eaeb9cf5af6ce55a9e59153c1a1be3244f' with options: None
+info: 27.03.2022 14:20:46.632 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT s."Id", s."Name", s."UserId"
+      FROM "Subjects" AS s
+info: 27.03.2022 14:20:49.019 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 6.0.3 initialized 'ApplicationContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.3+94d0a8eaeb9cf5af6ce55a9e59153c1a1be3244f' with options: None
+info: 27.03.2022 14:20:49.019 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT l."Id", l."Estimation", l."SubjectId", l."UserId", l.date
+      FROM "Lessons" AS l
+info: 27.03.2022 14:20:54.299 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 6.0.3 initialized 'ApplicationContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.3+94d0a8eaeb9cf5af6ce55a9e59153c1a1be3244f' with options: None
+info: 27.03.2022 14:20:54.300 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT l."Id", l."Estimation", l."SubjectId", l."UserId", l.date
+      FROM "Lessons" AS l
+info: 27.03.2022 14:20:55.251 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 6.0.3 initialized 'ApplicationContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.3+94d0a8eaeb9cf5af6ce55a9e59153c1a1be3244f' with options: None
+info: 27.03.2022 14:20:55.253 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (1ms) [Parameters=[@__model_User_Id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT u."Id", u."ClassId", u."Login", u."Name", u."Password", u."RoleId"
+      FROM "Users" AS u
+      WHERE u."Id" = @__model_User_Id_0
+      LIMIT 1
+info: 27.03.2022 14:20:55.258 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (1ms) [Parameters=[@__model_Subject_Id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT s."Id", s."Name", s."UserId"
+      FROM "Subjects" AS s
+      WHERE s."Id" = @__model_Subject_Id_0
+      LIMIT 1
+info: 27.03.2022 14:20:55.432 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (37ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = Int32), @p2='?' (DbType = Int32), @p3='?' (DbType = DateTime)], CommandType='Text', CommandTimeout='30']
+      INSERT INTO "Lessons" ("Estimation", "SubjectId", "UserId", date)
+      VALUES (@p0, @p1, @p2, @p3)
+      RETURNING "Id";
+info: 27.03.2022 14:20:55.476 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 6.0.3 initialized 'ApplicationContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.3+94d0a8eaeb9cf5af6ce55a9e59153c1a1be3244f' with options: None
+info: 27.03.2022 14:20:55.476 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT l."Id", l."Estimation", l."SubjectId", l."UserId", l.date
+      FROM "Lessons" AS l
+info: 27.03.2022 14:21:00.387 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 6.0.3 initialized 'ApplicationContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.3+94d0a8eaeb9cf5af6ce55a9e59153c1a1be3244f' with options: None
+info: 27.03.2022 14:21:00.387 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (0ms) [Parameters=[@__num_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT l."Id", l."Estimation", l."SubjectId", l."UserId", l.date
+      FROM "Lessons" AS l
+      WHERE l."Estimation" = @__num_0
+info: 27.03.2022 14:21:02.651 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 6.0.3 initialized 'ApplicationContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.3+94d0a8eaeb9cf5af6ce55a9e59153c1a1be3244f' with options: None
+info: 27.03.2022 14:21:02.652 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (0ms) [Parameters=[@__num_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT l."Id", l."Estimation", l."SubjectId", l."UserId", l.date
+      FROM "Lessons" AS l
+      WHERE l."Estimation" = @__num_0
+info: 27.03.2022 14:45:27.897 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 6.0.3 initialized 'ApplicationContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.3+94d0a8eaeb9cf5af6ce55a9e59153c1a1be3244f' with options: None
+info: 27.03.2022 14:45:29.067 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (117ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT c."Id", c."Letter", c."Number"
+      FROM "Classes" AS c
+info: 27.03.2022 14:45:32.581 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 6.0.3 initialized 'ApplicationContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.3+94d0a8eaeb9cf5af6ce55a9e59153c1a1be3244f' with options: None
+info: 27.03.2022 14:45:32.689 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (9ms) [Parameters=[@__num_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT c."Id", c."Letter", c."Number"
+      FROM "Classes" AS c
+      WHERE c."Number" = @__num_0
+info: 27.03.2022 14:47:38.982 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 6.0.3 initialized 'ApplicationContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.3+94d0a8eaeb9cf5af6ce55a9e59153c1a1be3244f' with options: None
+info: 27.03.2022 14:47:39.628 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (81ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT l."Id", l."Estimation", l."SubjectId", l."UserId", l.date
+      FROM "Lessons" AS l
+info: 27.03.2022 14:47:42.337 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 6.0.3 initialized 'ApplicationContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.3+94d0a8eaeb9cf5af6ce55a9e59153c1a1be3244f' with options: None
+info: 27.03.2022 14:47:42.434 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (9ms) [Parameters=[@__num_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT l."Id", l."Estimation", l."SubjectId", l."UserId", l.date
+      FROM "Lessons" AS l
+      WHERE l."Estimation" = @__num_0
+info: 27.03.2022 14:49:07.760 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 6.0.3 initialized 'ApplicationContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.3+94d0a8eaeb9cf5af6ce55a9e59153c1a1be3244f' with options: None
+info: 27.03.2022 14:49:07.763 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT l."Id", l."Estimation", l."SubjectId", l."UserId", l.date
+      FROM "Lessons" AS l
+info: 27.03.2022 14:49:10.780 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 6.0.3 initialized 'ApplicationContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.3+94d0a8eaeb9cf5af6ce55a9e59153c1a1be3244f' with options: None
+info: 27.03.2022 14:49:10.784 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (1ms) [Parameters=[@__num_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT l."Id", l."Estimation", l."SubjectId", l."UserId", l.date
+      FROM "Lessons" AS l
+      WHERE l."Estimation" = @__num_0
+info: 27.03.2022 14:50:32.241 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 6.0.3 initialized 'ApplicationContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.3+94d0a8eaeb9cf5af6ce55a9e59153c1a1be3244f' with options: None
+info: 27.03.2022 14:50:32.247 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT c."Id", c."Letter", c."Number"
+      FROM "Classes" AS c
+info: 27.03.2022 14:50:35.292 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 6.0.3 initialized 'ApplicationContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.3+94d0a8eaeb9cf5af6ce55a9e59153c1a1be3244f' with options: None
+info: 27.03.2022 14:50:35.296 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (0ms) [Parameters=[@__num_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT c."Id", c."Letter", c."Number"
+      FROM "Classes" AS c
+      WHERE c."Number" = @__num_0
+info: 27.03.2022 14:51:07.396 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 6.0.3 initialized 'ApplicationContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.3+94d0a8eaeb9cf5af6ce55a9e59153c1a1be3244f' with options: None
+info: 27.03.2022 14:51:07.396 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT c."Id", c."Letter", c."Number"
+      FROM "Classes" AS c
+info: 27.03.2022 14:51:10.916 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 6.0.3 initialized 'ApplicationContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.3+94d0a8eaeb9cf5af6ce55a9e59153c1a1be3244f' with options: None
+info: 27.03.2022 14:51:10.917 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (1ms) [Parameters=[@__num_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT c."Id", c."Letter", c."Number"
+      FROM "Classes" AS c
+      WHERE c."Number" = @__num_0

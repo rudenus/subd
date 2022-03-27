@@ -30,7 +30,6 @@
         {
             this.buttonAdd = new System.Windows.Forms.Button();
             this.textBoxName = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.buttonRefresh = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -47,6 +46,8 @@
             this.dataGridView = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label1 = new System.Windows.Forms.Label();
+            this.textBoxFiltred = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -70,22 +71,13 @@
             this.textBoxName.Size = new System.Drawing.Size(42, 27);
             this.textBoxName.TabIndex = 1;
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(229, 27);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(50, 20);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "label1";
-            // 
             // buttonRefresh
             // 
             this.buttonRefresh.Location = new System.Drawing.Point(22, 304);
             this.buttonRefresh.Name = "buttonRefresh";
             this.buttonRefresh.Size = new System.Drawing.Size(143, 50);
             this.buttonRefresh.TabIndex = 4;
-            this.buttonRefresh.Text = "Получить список классов";
+            this.buttonRefresh.Text = "Получить список ролей";
             this.buttonRefresh.UseVisualStyleBackColor = true;
             this.buttonRefresh.Click += new System.EventHandler(this.buttonRefresh_Click);
             // 
@@ -225,11 +217,30 @@
             this.name.MinimumWidth = 6;
             this.name.Name = "name";
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label1.Location = new System.Drawing.Point(8, 369);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(171, 19);
+            this.label1.TabIndex = 17;
+            this.label1.Text = "Фильтрация по названию";
+            // 
+            // textBoxFiltred
+            // 
+            this.textBoxFiltred.Location = new System.Drawing.Point(24, 408);
+            this.textBoxFiltred.Name = "textBoxFiltred";
+            this.textBoxFiltred.Size = new System.Drawing.Size(125, 27);
+            this.textBoxFiltred.TabIndex = 16;
+            // 
             // FormRoles
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.textBoxFiltred);
             this.Controls.Add(this.dataGridView);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.buttonDelete);
@@ -237,7 +248,6 @@
             this.Controls.Add(this.buttonUpdate);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.buttonRefresh);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.buttonAdd);
             this.Name = "FormRoles";
             this.Text = "FormClasses";
@@ -258,7 +268,6 @@
 
         private Button buttonAdd;
         private TextBox textBoxName;
-        private Label label1;
         private Button buttonRefresh;
         private GroupBox groupBox1;
         private Label label2;
@@ -275,5 +284,7 @@
         private DataGridView dataGridView;
         private DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private DataGridViewTextBoxColumn name;
+        private Label label1;
+        private TextBox textBoxFiltred;
     }
 }

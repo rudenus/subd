@@ -69,7 +69,21 @@ namespace WinFormsApp1
         {
             try
             {
-                var list = lessonStorage.GetFullList();
+                List<Lesson> list;
+                if (textBoxFiltred.Text != "")
+                {
+                    if (!int.TryParse(textBoxFiltred.Text, out int temp))
+                    {
+                        MessageBox.Show("Оценка должна быть целым числом", "Ошибка", MessageBoxButtons.OK,
+              MessageBoxIcon.Error);
+                        return;
+                    }
+                    list = lessonStorage.GetFiltredList(Convert.ToInt32(textBoxFiltred.Text));
+                }
+                else
+                {
+                    list = lessonStorage.GetFullList();
+                }
                 if (list != null)
                 {
                     dataGridView.DataSource = list;

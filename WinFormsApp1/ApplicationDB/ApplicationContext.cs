@@ -1,5 +1,6 @@
 ﻿using ApplicationDB.Tables;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Logging;
 
 namespace ApplicationDB
 {
@@ -11,10 +12,17 @@ namespace ApplicationDB
         public DbSet<Subject> Subjects { get; set; }
         public DbSet<User> Users { get; set; }
 
-
+        private readonly StreamWriter _logStream = new StreamWriter("../../../../mylog.txt", append: true);
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
+            optionsBuilder.LogTo(_logStream.WriteLine, LogLevel.Information);
+            
             optionsBuilder.UseNpgsql("Host=localhost;Port=5432;Database=local;Username=postgres;Password=qwer");
+        }
+        public override void Dispose()
+        {
+            base.Dispose();
+            _logStream.Dispose();
         }
     }
 }

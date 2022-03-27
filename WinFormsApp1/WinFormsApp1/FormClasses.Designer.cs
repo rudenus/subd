@@ -31,7 +31,6 @@
             this.buttonAdd = new System.Windows.Forms.Button();
             this.textBoxNumber = new System.Windows.Forms.TextBox();
             this.textBoxLetter = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.buttonRefresh = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -52,6 +51,8 @@
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.number = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Letter = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.textBoxFiltred = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -81,15 +82,6 @@
             this.textBoxLetter.Name = "textBoxLetter";
             this.textBoxLetter.Size = new System.Drawing.Size(42, 27);
             this.textBoxLetter.TabIndex = 2;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(229, 27);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(50, 20);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "label1";
             // 
             // buttonRefresh
             // 
@@ -274,11 +266,30 @@
             this.Letter.MinimumWidth = 6;
             this.Letter.Name = "Letter";
             // 
+            // textBoxFiltred
+            // 
+            this.textBoxFiltred.Location = new System.Drawing.Point(28, 396);
+            this.textBoxFiltred.Name = "textBoxFiltred";
+            this.textBoxFiltred.Size = new System.Drawing.Size(125, 27);
+            this.textBoxFiltred.TabIndex = 12;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label1.Location = new System.Drawing.Point(-3, 357);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(201, 19);
+            this.label1.TabIndex = 13;
+            this.label1.Text = "Фильтрация по номеру класса";
+            // 
             // FormClasses
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.textBoxFiltred);
             this.Controls.Add(this.dataGridView);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.buttonDelete);
@@ -286,7 +297,6 @@
             this.Controls.Add(this.buttonUpdate);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.buttonRefresh);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.buttonAdd);
             this.Name = "FormClasses";
             this.Text = "FormClasses";
@@ -308,7 +318,6 @@
         private Button buttonAdd;
         private TextBox textBoxNumber;
         private TextBox textBoxLetter;
-        private Label label1;
         private Button buttonRefresh;
         private GroupBox groupBox1;
         private Label label3;
@@ -329,5 +338,7 @@
         private DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private DataGridViewTextBoxColumn number;
         private DataGridViewTextBoxColumn Letter;
+        private TextBox textBoxFiltred;
+        private Label label1;
     }
 }

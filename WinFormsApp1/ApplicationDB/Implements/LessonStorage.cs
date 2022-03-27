@@ -15,6 +15,12 @@ namespace ApplicationDB.Implements
             return context.Lessons
             .ToList();
         }
+        public List<Lesson> GetFiltredList(int num)
+        {
+            using var context = new ApplicationContext();
+            return context.Lessons.Where(r => r.Estimation == num)
+            .ToList();
+        }
         public Lesson GetElement(int id)
         {
             using var context = new ApplicationContext();

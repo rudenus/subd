@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.buttonAdd = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
             this.buttonRefresh = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label9 = new System.Windows.Forms.Label();
@@ -48,14 +47,16 @@
             this.number = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Letter = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.textBoxIdUpdate = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.textBoxSubjectIdUpdate = new System.Windows.Forms.TextBox();
             this.textBoxUserIdUpdate = new System.Windows.Forms.TextBox();
             this.textBoxEstimationUpdate = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.textBoxIdUpdate = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.textBoxFiltred = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
@@ -72,22 +73,13 @@
             this.buttonAdd.UseVisualStyleBackColor = true;
             this.buttonAdd.Click += new System.EventHandler(this.buttonAdd_Click);
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(229, 27);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(50, 20);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "label1";
-            // 
             // buttonRefresh
             // 
             this.buttonRefresh.Location = new System.Drawing.Point(22, 304);
             this.buttonRefresh.Name = "buttonRefresh";
             this.buttonRefresh.Size = new System.Drawing.Size(143, 50);
             this.buttonRefresh.TabIndex = 4;
-            this.buttonRefresh.Text = "Получить список классов";
+            this.buttonRefresh.Text = "Получить список уроков";
             this.buttonRefresh.UseVisualStyleBackColor = true;
             this.buttonRefresh.Click += new System.EventHandler(this.buttonRefresh_Click);
             // 
@@ -256,6 +248,24 @@
             this.groupBox2.TabIndex = 12;
             this.groupBox2.TabStop = false;
             // 
+            // textBoxIdUpdate
+            // 
+            this.textBoxIdUpdate.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textBoxIdUpdate.Location = new System.Drawing.Point(113, 32);
+            this.textBoxIdUpdate.Name = "textBoxIdUpdate";
+            this.textBoxIdUpdate.Size = new System.Drawing.Size(42, 25);
+            this.textBoxIdUpdate.TabIndex = 14;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label6.Location = new System.Drawing.Point(0, 33);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(22, 20);
+            this.label6.TabIndex = 13;
+            this.label6.Text = "Id";
+            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -310,29 +320,30 @@
             this.textBoxEstimationUpdate.Size = new System.Drawing.Size(42, 25);
             this.textBoxEstimationUpdate.TabIndex = 5;
             // 
-            // label6
+            // label1
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label6.Location = new System.Drawing.Point(0, 33);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(22, 20);
-            this.label6.TabIndex = 13;
-            this.label6.Text = "Id";
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label1.Location = new System.Drawing.Point(16, 369);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(154, 19);
+            this.label1.TabIndex = 15;
+            this.label1.Text = "Фильтрация по оценке";
             // 
-            // textBoxIdUpdate
+            // textBoxFiltred
             // 
-            this.textBoxIdUpdate.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBoxIdUpdate.Location = new System.Drawing.Point(113, 32);
-            this.textBoxIdUpdate.Name = "textBoxIdUpdate";
-            this.textBoxIdUpdate.Size = new System.Drawing.Size(42, 25);
-            this.textBoxIdUpdate.TabIndex = 14;
+            this.textBoxFiltred.Location = new System.Drawing.Point(24, 408);
+            this.textBoxFiltred.Name = "textBoxFiltred";
+            this.textBoxFiltred.Size = new System.Drawing.Size(125, 27);
+            this.textBoxFiltred.TabIndex = 14;
             // 
             // FormLessons
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.textBoxFiltred);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.dataGridView);
             this.Controls.Add(this.groupBox3);
@@ -340,7 +351,6 @@
             this.Controls.Add(this.buttonUpdate);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.buttonRefresh);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.buttonAdd);
             this.Name = "FormLessons";
             this.Text = "FormClasses";
@@ -360,7 +370,6 @@
         #endregion
 
         private Button buttonAdd;
-        private Label label1;
         private Button buttonRefresh;
         private GroupBox groupBox1;
         private Button buttonUpdate;
@@ -387,5 +396,7 @@
         private TextBox textBoxSubjectIdUpdate;
         private TextBox textBoxUserIdUpdate;
         private TextBox textBoxEstimationUpdate;
+        private Label label1;
+        private TextBox textBoxFiltred;
     }
 }
